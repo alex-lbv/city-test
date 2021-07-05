@@ -1,0 +1,17 @@
+.btn {
+  width: 125px;
+  padding: 6px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+  border-radius: 2px;
+
+  &--dark {
+    color: rgb(238, 238, 238);
+    background-image: linear-gradient(-90deg, rgb(68, 136, 187) 0%, rgb(46, 93, 128) 100%);
+  }
+
+  &--light {
+    color: rgb(170, 170, 170);
+  }
+}

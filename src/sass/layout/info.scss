@@ -1,0 +1,120 @@
+.info {
+  position: relative;
+  background-color: rgb(238, 238, 238);
+
+  @media screen and (max-width: 767px) {
+    margin-top: -115px;
+  }
+
+  .container {
+    padding-top: 53px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 108px;
+      padding-bottom: 14px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1100px) {
+      padding-bottom: 53px;
+    }
+  }
+
+  .title {
+    color: rgb(68, 136, 187);
+    padding-left: 48px;
+    margin-bottom: 55px;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__image {
+    margin-right: 98px;
+
+    @media screen and (max-width: 1100px) {
+      display: none;
+    }
+
+    img {
+      transform: translateY(-92px);
+      width: 503px;
+      height: 491px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 49px;
+    list-style-type: none;
+    counter-reset: num;
+
+    @media screen and (min-width: 768px) and (max-width: 1100px) {
+      margin: auto;
+      max-width: 80%;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      margin-bottom: 29px;
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 22px;
+      }
+
+      p::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -13px;
+        width: 100%;
+        border-bottom: 1px dashed rgb(170, 170, 170);
+
+        @media screen and (max-width: 767px) {
+          bottom: -9px;
+        }
+      }
+    }
+
+    &::before {
+      content: counter(num);
+      counter-increment: num;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -50px;
+      margin: auto;
+      width: 30px;
+      height: 30px;
+      background-color: rgb(68, 136, 187);
+      color: #fff;
+      text-align: center;
+      line-height: 28px;
+      font-size: 18px;
+      border-radius: 50%;
+    }
+
+    p {
+      display: inline-block;
+      position: relative;
+      font-size: 18px;
+      color: rgb(68, 136, 187);
+      font-weight: bold;
+      line-height: 1.2;
+
+      @media screen and (max-width: 767px) {
+        line-height: 1.39;
+      }
+    }
+  }
+}
+

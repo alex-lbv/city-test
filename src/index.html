@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>City Test</title>
+    <link rel="stylesheet" href="./styles/main.min.css">
+</head>
+<body>
+<main>
+    <section class="banner">
+        <div class="container">
+            <div class="banner__container">
+                <h1 class="title">Banner header</h1>
+                <p class="banner__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud</p>
+            </div>
+            <form class="form" method="post" enctype="multipart/form-data" autocomplete="off" action="">
+                <span class="form__title">Request form</span>
+                <div class="form__group">
+                    <input id="email" name="email" type="email" autocomplete="off" required>
+                    <label for="email">Enter your E-Mail</label>
+                    <span class="form__error-message">Enter correct E-Mail</span>
+                    <button class="form__input-clear">
+                        <svg width="10" height="10">
+                            <use xlink:href="img/symbol/sprite.svg#clear"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="form__group">
+                    <input id="username" name="username" type="text" autocomplete="off" required>
+                    <label for="username">Enter your name</label>
+                    <span class="form__error-message">Enter correct Name</span>
+                    <button class="form__input-clear">
+                        <svg width="10" height="10">
+                            <use xlink:href="img/symbol/sprite.svg#clear"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="form__group">
+                    <select id="country" class="form__select" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="country-1">Country 1</option>
+                        <option value="country-2">Country 2</option>
+                    </select>
+                    <label class="visually-hidden" for="country">Select your country</label>
+                    <span class="form__error-message">Select your country</span>
+                </div>
+
+                <div class="form__conditions">
+                    <input class="visually-hidden" id="condition" type="checkbox" required>
+                    <label for="condition">I agree with Terms & Conditions</label>
+                </div>
+                <div class="form__button-wrapper">
+                    <button class="btn btn--dark" type="submit">Submit</button>
+                    <a class="btn btn--light" href="#">Hyperlink</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="posts">
+        <h2 class="visually-hidden">Posts</h2>
+        <div class="container">
+            <ul class="posts__list">
+                <li class="post">
+                    <a href="#">
+                        <picture>
+                            <source srcset="./img/post-1@2x.jpg 2x, ./img/post-1.jpg 1x"/>
+                            <img class="post__image" src="./img/post-1.jpg" alt="Post header 1"/>
+                        </picture>
+                        <div class="post__content">
+                            <h3 class="post__title">Post header 1</h3>
+                            <p class="post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <svg width="18" height="18">
+                                <use xlink:href="img/symbol/sprite.svg#post-icon"/>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="post">
+                    <a href="#">
+                        <picture>
+                            <source srcset="./img/post-2@2x.jpg 2x, ./img/post-2.jpg 1x"/>
+                            <img class="post__image" src="./img/post-2.jpg" alt="Post header 2"/>
+                        </picture>
+                        <div class="post__content">
+                            <h3 class="post__title">Post header 2</h3>
+                            <p class="post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <svg width="18" height="18">
+                                <use xlink:href="img/symbol/sprite.svg#post-icon"/>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="post">
+                    <a href="#">
+                        <picture>
+                            <source srcset="./img/post-3@2x.jpg 2x, ./img/post-3.jpg 1x"/>
+                            <img class="post__image" src="./img/post-3.jpg" alt="Post header 3"/>
+                        </picture>
+                        <div class="post__content">
+                            <h3 class="post__title">Post header 3</h3>
+                            <p class="post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <svg width="18" height="18">
+                                <use xlink:href="img/symbol/sprite.svg#post-icon"/>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="post post--large">
+                    <a href="#">
+                        <picture>
+                            <source srcset="./img/post-4@2x.jpg 2x, ./img/post-4.jpg 1x"/>
+                            <img class="post__image" src="./img/post-4.jpg" alt="Post header 4"/>
+                        </picture>
+                        <div class="post__content">
+                            <h3 class="post__title">Post header 4</h3>
+                            <p class="post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <svg width="18" height="18">
+                                <use xlink:href="img/symbol/sprite.svg#post-icon"/>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="post post--large">
+                    <a href="#">
+                        <picture>
+                            <source srcset="./img/post-5@2x.jpg 2x, ./img/post-5.jpg 1x"/>
+                            <img class="post__image" src="./img/post-5.jpg" alt="Post header 5"/>
+                        </picture>
+                        <div class="post__content">
+                            <h3 class="post__title">Post header 5</h3>
+                            <p class="post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <svg width="18" height="18">
+                                <use xlink:href="img/symbol/sprite.svg#post-icon"/>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="container">
+            <div class="info__image">
+                <img src="./img/info.png" alt="Title text"/>
+            </div>
+            <div class="info__content">
+                <h2 class="title">Title text</h2>
+                <ol class="info__list">
+                    <li class="info__item">
+                        <p>Duis aute irure dolor in reprehenderit<sup>1</sup> in voluptate velit</p>
+                    </li>
+                    <li class="info__item">
+                        <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    </li>
+                    <li class="info__item">
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </li>
+                    <li class="info__item">
+                        <p>Et dolore magna aliqua</p>
+                    </li>
+                    <li class="info__item">
+                        <p>Sed do eiusmod tempor<sup>2</sup> incididunt ut labore</p>
+                    </li>
+                    <li class="info__item">
+                        <p>Lorem ipsum dolor sit amet<sup>3</sup> consectetur adipisicing elit</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <ol class="footer__list">
+            <li class="footer__item">
+                <p>Reprehenderit - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore</p>
+            </li>
+            <li class="footer__item">
+                <p>Tempor - Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.</p>
+            </li>
+            <li class="footer__item">
+                <p>Amet - Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.</p>
+            </li>
+        </ol>
+    </div>
+</footer>
+
+<div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__container">
+        <button class="modal__close">
+            <svg width="30" height="30">
+                <use xlink:href="img/symbol/sprite.svg#close"/>
+            </svg>
+        </button>
+
+        <span class="modal__title">External link</span>
+        <p class="modal__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit
+            voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+        <div class="modal__group">
+            <button id="modal-cancel" class="btn btn--light">Cancel</button>
+            <button id="modal-accept" class="btn btn--dark">Accept</button>
+        </div>
+    </div>
+</div>
+
+<script src="./js/scripts.js"></script>
+</body>
+</html>

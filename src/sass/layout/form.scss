@@ -1,0 +1,211 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 19px 20px 20px 18px;
+  max-width: 290px;
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+
+  @media screen and (max-width: 767px) {
+    margin-top: 54px;
+    padding: 19px 10px 20px;
+    max-width: none;
+  }
+
+  &__title {
+    margin-bottom: 13px;
+    font-size: 24px;
+    color: rgb(68, 136, 187);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+
+    @media screen and (max-width: 767px) {
+      padding-left: 8px;
+    }
+  }
+
+  &__group {
+    position: relative;
+    margin-bottom: 15px;
+
+    input,
+    select {
+      width: 100%;
+      padding: 15px 10px 14px;
+      border-radius: 3px;
+      background-color: rgb(238, 238, 238);
+      border: 1px solid transparent;
+      color: rgb(170, 170, 170);
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    label {
+      position: absolute;
+      pointer-events: none;
+      left: 10px;
+      top: 15px;
+      transition: 0.2s ease all;
+      color: rgb(170, 170, 170);
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    select {
+      font-size: 16px;
+      line-height: 1.2;
+      color: rgb(170, 170, 170);
+      cursor: pointer;
+      appearance: none;
+      background-size: contain;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(170, 170, 170)' height='10' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position-x: 111%;
+      background-position-y: 0;
+    }
+
+    input:focus,
+    select:focus {
+      outline: none;
+    }
+
+    input:focus ~ label,
+    input:valid ~ label {
+      top: 3px;
+      font-size: 10px;
+    }
+
+    &.invalid input {
+      position: relative;
+      border: 1px solid rgb(187, 68, 68);
+      color: rgb(187, 68, 68);
+    }
+
+    &.invalid .form__input-clear svg {
+      fill: rgb(187, 68, 68);
+    }
+
+    &.invalid input ~ label {
+      top: 3px;
+      font-size: 10px;
+      color: rgb(187, 68, 68);
+    }
+
+    &.valid .form__input-clear svg {
+      fill: rgb(68, 136, 187);
+    }
+
+    &.valid input ~ label {
+      color: rgb(68, 136, 187);
+    }
+
+    &.valid select {
+      background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(68, 136, 187)' height='10' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    }
+
+    &.valid input,
+    &.valid select {
+      border: 1px solid rgb(68, 136, 187);
+      color: rgb(68, 136, 187);
+
+      .background {
+        border-width: 1px;
+        border-color: rgb(68, 136, 187);
+        border-style: solid;
+        border-radius: 3px;
+        background-color: rgb(238, 238, 238);
+        position: absolute;
+        left: 1025px;
+        top: 155px;
+        width: 248px;
+        height: 48px;
+        z-index: 145;
+      }
+    }
+
+    &.invalid .form__error-message {
+      display: block;
+    }
+  }
+
+  &__conditions {
+    margin-bottom: 15px;
+
+    label {
+      position: relative;
+      padding-left: 26px;
+      font-size: 16px;
+      color: rgb(170, 170, 170);
+      line-height: 1.2;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border-radius: 2px;
+        background-color: rgb(238, 238, 238);
+      }
+    }
+
+    input:checked + label::after {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: 13px;
+      height: 13px;
+      background-image: url("../img/check-icon.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__error-message {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    bottom: -85%;
+    left: 0;
+    right: 0;
+    width: 168px;
+    padding: 12px;
+    margin: auto;
+    font-size: 16px;
+    color: rgb(238, 238, 238);
+    line-height: 1.2;
+    background-image: url("../img/error-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: center;
+  }
+
+  &__input-clear {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    outline: none;
+
+    svg {
+      display: block;
+      pointer-events: none;
+    }
+  }
+}

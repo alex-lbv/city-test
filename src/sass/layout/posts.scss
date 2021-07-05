@@ -1,0 +1,27 @@
+.posts {
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .container {
+    padding-top: 75px;
+    padding-bottom: 50px;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 20px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+}
